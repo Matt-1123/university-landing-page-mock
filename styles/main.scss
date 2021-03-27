@@ -86,7 +86,6 @@ img {
   width: 90%;
   max-width: 70rem;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .container--narrow {
   max-width: 52rem;
@@ -97,16 +96,33 @@ img {
 .sidebar {
   display: flex;
   flex-wrap: wrap;
+  gap: 2em;
   align-items: center;
 
   &-main {
-    flex: 1 1 65%;
+    flex: 1 1 100%;
   }
 
   &-side {
-    flex: 1 1 35%;
+    flex: 1 1 100%;
+    // min-width: 20em;
     display: flex;
     justify-content: center;
+  }
+
+  
+  @media (min-width: 50em) {
+    &-main {
+      flex: 1 1 calc(65% - 2em);
+    }
+  
+    &-side {
+      flex: 1 1 35%;
+    }
+    
+    .left {order: 1}
+    .right {order: 2}
+
   }
 }
 
@@ -438,4 +454,122 @@ header {
       display: flex;
     } 
   }
+}
+
+/* -------------------------------------------------- 
+/* CATEGORIES
+/* ------------------------------------------------ */
+
+.category {
+  &--hero {
+    background: #000;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+    @media (min-width: 50em) {
+      height: 30rem;
+      background: url(../img/why-us-desk.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &--title {
+    width: 90%;
+    margin: 0 auto;
+    background: #000; 
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;   
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: 50em) {
+      width: calc(35% - 2em);
+      max-width: 270px;
+      top: 100%;
+      left: 5%;
+      transform: translate(0, -50%);
+    }
+
+    & > * {
+      flex-basis: 100%;      
+    }
+    
+    p {
+      padding: .25em .5em;
+      text-transform: uppercase;
+      font-size: 1.8em;
+      font-family: $ff-accent;
+      color: #fff;
+
+      @media (min-width: 50em) {
+        font-size: 2em;
+        
+        span {
+          display: block;
+        }
+      }
+    }
+    
+    .title-stripes {
+      background: #000;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      padding: .25em .5em;
+      color: #fff; 
+
+      @media (min-width: 50em) {
+        padding-bottom: 3em;
+      }
+    }
+  }
+
+  .container {
+    margin-top: 6em;
+
+    p {
+      margin: 1em 0;
+    }
+
+    @media (min-width: 50em) {
+      margin-top: 2em;
+    }
+  }
+
+  &#why-us &--hero {
+    background: url(../img/why-us-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    @media (min-width: 50em) {
+      background: url(../img/why-us-desk.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &#why-us .title-stripes {
+    background: url(../img/mobile-stripes/why-us-hero-mb.png);
+
+    @media (min-width: 50em) {
+      background: url(../img/stripes-desktop/why-us-stripes-dt.png);
+    }
+  }
+
+ 
 }
