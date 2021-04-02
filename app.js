@@ -1,3 +1,6 @@
+/* -------------------------------------------------- 
+/* Mobile Navigation Menu
+/* ------------------------------------------------ */
 const mobileNavToggle = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav--mobile");
@@ -10,6 +13,12 @@ const mobileNavToggle = () => {
     burger.classList.toggle("toggle");
   });
 };
+
+/* -------------------------------------------------- 
+/* SLIDERS: http://kenwheeler.github.io/slick/
+/* ------------------------------------------------ */
+const slider = document.querySelector(".slider");
+slider.slick();
 
 const app = () => {
   mobileNavToggle();
