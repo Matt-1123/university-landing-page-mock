@@ -1,0 +1,11 @@
+.highlight {
+  color: $clr-primary-400!important;
+}
+
+.hidden-mb {
+  display: none;
+
+  @media (min-width: 60rem) {
+    display: inherit;
+  }
+}

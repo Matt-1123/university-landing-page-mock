@@ -1,3 +1,8 @@
+@import "utilities";
+
+@import "slick";
+@import "slick-theme";
+
 /* -------------------------------------------------- 
 /* CONFIG / LAYOUT
 /* ------------------------------------------------ */
@@ -154,11 +159,6 @@ img {
     background: $clr-primary-600;
   }
 }
-
-.highlight {
-  color: $clr-primary-400!important;
-}
-
 
 /* -------------------------------------------------- 
 /* HEADER
@@ -688,21 +688,44 @@ header {
 /* -------------------------------------------------- 
 /* SLIDER
 /* ------------------------------------------------ */
-.slider--container {
-  height: 15rem;
-}
 
 .slider {
-  border: 1px solid red;
-  height: 100%;
+  @media (min-width: 60rem) {
+    padding: 1rem 5rem;
+  }
+    
+  .slick-prev::before {
+    content: '\f053';
+    font-family: FontAwesome; 
+  }
+  .slick-next::before {
+    content: '\f054';
+    font-family: FontAwesome; 
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    color: $clr-primary-400;
+    font-size: 2rem;
+  }
+
+  .slick-dots li button::before {
+    color: $clr-primary-900;
+    font-size: 2rem;
+  }
+  .slick-dots li.slick-active button::before {
+    color: $clr-primary-400;
+    font-size: 2rem;
+  }
+
+
   
   &-item {
-    width: 15rem;
-    max-width: 15rem;
-    height: 100%;
-    border: 1px solid orange;
-    display: flex;
-    flex-direction: column;
+    width: 8rem;
+    min-height: 12rem;
+    margin: 1rem;
+    // display: flex;
+    // flex-direction: column;
+    position: relative;
     
     .fa {
       color: $clr-primary-400;
@@ -710,12 +733,18 @@ header {
     
     h3 {
       font-size: 1.375rem;
-      margin: 0 1rem;
+      margin: .8rem 0;
       line-height: 1;
     }
 
     .bottom {
-      align-self: flex-end;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    p {
+      margin: 0!important;
     }
   }
 }

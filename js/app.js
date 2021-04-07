@@ -21,6 +21,7 @@ const slider = document.querySelector(".slider");
 slider.slick();
 
 const app = () => {
+  console.log("test");
   mobileNavToggle();
 };
 
