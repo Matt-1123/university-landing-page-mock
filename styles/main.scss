@@ -134,6 +134,11 @@ img {
   }
 }
 
+.banner-cta {
+  text-align: center;
+  margin: 4rem auto;
+}
+
 .btn{
   display: inline-block;
   padding: 1em 2.5em;
@@ -587,6 +592,13 @@ header {
       @media (min-width: 60em) {
         padding-bottom: 3em;
       }
+    }
+  }
+
+  &--title.title-right {
+      
+    @media (min-width: 60em) {
+      left: 65%;
     }
   }
 
