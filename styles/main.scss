@@ -108,6 +108,11 @@ img {
 
   &-main {
     flex: 1 1 100%;
+
+    @media (min-width: 60rem) {
+      padding: 0 1rem;
+      margin-top: 1rem;
+    }
   }
 
   &-side {
@@ -706,7 +711,7 @@ header {
   
   .quote {
     font-style: italic;
-    font-size: 1.675rem;
+    font-size: 1.5rem;
     font-family: $ff-accent;
     position: relative;
   }
