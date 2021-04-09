@@ -18,11 +18,11 @@ const mobileNavToggle = () => {
 /* SLIDERS: http://kenwheeler.github.io/slick/
 /* ------------------------------------------------ */
 const slider = document.querySelector(".slider");
-slider.slick();
 
 const app = () => {
   console.log("test");
   mobileNavToggle();
+  slider.slick();
 };
 
 app();

@@ -1,12 +1,6 @@
-@import "utilities";
-
-@import "slick";
-@import "slick-theme";
-
 /* -------------------------------------------------- 
-/* CONFIG / LAYOUT
+/* VARIABLES
 /* ------------------------------------------------ */
-
 $clr-primary-400: #c28e0e;
 $clr-primary-600: #98700d;
 $clr-primary-900: #333;
@@ -19,6 +13,10 @@ $clr-secondary-700: #595959;
 $ff-primary: Arial, sans-serif;
 $ff-accent: 'Archivo Narrow', sans-serif;
 
+
+/* -------------------------------------------------- 
+/* CONFIG / LAYOUT
+/* ------------------------------------------------ */
 *,*::before,*::after {
   box-sizing: border-box;
 }
@@ -159,6 +157,31 @@ img {
     background: $clr-primary-600;
   }
 }
+
+
+/* -------------------------------------------------- 
+/* UTILITIES
+/* ------------------------------------------------ */
+.highlight {
+  color: $clr-primary-400!important;
+}
+
+.hidden-mb {
+  display: none;
+
+  @media (min-width: 60rem) {
+    display: inherit;
+  }
+}
+
+.hidden-dt {
+  display: inherit;
+
+  @media (min-width: 60rem) {
+    display: none;
+  }
+}
+
 
 /* -------------------------------------------------- 
 /* HEADER
@@ -466,6 +489,8 @@ header {
 /* ------------------------------------------------ */
 
 .category {
+  margin-top: 4rem;
+
   &--hero {
     background: #fff;
     height: 20rem;
@@ -578,6 +603,11 @@ header {
     }
   }
 
+  // ------------------------------------------------------- //
+  // 'WHY US / FIND YOUR PLACE' 
+  // Styling specific to the 'Why Us / Find your place' section
+  // ------------------------------------------------------- //
+  
   &#why-us &--hero {
     background: url(../img/why-us-mobile.jpg);
     background-size: cover;
@@ -591,14 +621,52 @@ header {
       background-position: center center;
     }
   }
+
   &#why-us .title-stripes {
-    background: url(../img/mobile-stripes/why-us-hero-mb.png);
+    background: url(../img/mobile-stripes/why-us-stripes-mb.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
     @media (min-width: 60em) {
       background: url(../img/stripes-desktop/why-us-stripes-dt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+  }
+
+  // &#why-us .stat-num {
+  //   color: ???
+  // }
+
+
+  // ------------------------------------------------------- //
+  // ACADEMICS / CRAFT YOUR FUTURE
+  // Styling specific to the 'Academics / Craft Your Future' section
+  // ------------------------------------------------------- //
+  &#academics &--hero {
+    background: url(../img/academics-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    @media (min-width: 60em) {
+      background: url(../img/academics-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &#academics .title-stripes {
+    background: url(../img/mobile-stripes/academics-stripes-mb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: 60em) {
+      background: url(../img/stripes-desktop/academics-stripes-dt.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
