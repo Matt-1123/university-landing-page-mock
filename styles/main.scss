@@ -50,6 +50,7 @@ p {
 h1,h2,h3,h4 {
   font-family: $ff-accent;
   font-weight: bold;
+  line-height: 1;
 }
 h1 {font-size: 6.2rem} /* 74pt */
 h2 {font-size: 5.4rem} /* 64pt */
@@ -139,11 +140,6 @@ img {
   }
 }
 
-.banner-cta {
-  text-align: center;
-  margin: 4rem auto;
-}
-
 .btn{
   display: inline-block;
   padding: 1em 2.5em;
@@ -168,6 +164,59 @@ img {
   }
 }
 
+.banner-cta {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.full-width-banner {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: $clr-primary-600;
+  color: #fff;
+  line-height: 1.25;
+
+  .sidebar-side {
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    
+    @media (min-width: 60rem) {
+      flex-direction: row;
+      margin-top: 0;
+      padding-right: 10%;
+      
+
+      .fa {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .sidebar-main {
+    text-align: center;
+    padding: 0 1.2rem;
+    margin-top: 0;
+
+    @media (min-width: 60rem) {
+      text-align: left;
+    }
+  }
+
+  .font-sm {
+    margin-top: 1rem;
+    padding: 0 3rem;
+
+    @media (min-width: 60rem) {
+      padding: 0;
+    }
+  }
+
+}
 
 /* -------------------------------------------------- 
 /* UTILITIES
@@ -409,22 +458,34 @@ header {
 
     .why-us {
       .anchor-stripe {
-        background: url(../img/mobile-stripes/why-us-card.png);
+        background: url(../img/mobile-stripes/why-us-card-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
     .academics {
       .anchor-stripe {
-        background: url(../img/mobile-stripes/academics-card.png);
+        background: url(../img/mobile-stripes/academics-card-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
     .student-life {
       .anchor-stripe {
-        background: url(../img/mobile-stripes/student-life-card.png);
+        background: url(../img/mobile-stripes/student-life-card-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
     .fort-wayne {
       .anchor-stripe {
-        background: url(../img/mobile-stripes/fort-wayne-card.png);
+        background: url(../img/mobile-stripes/fort-wayne-card-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
 
@@ -654,9 +715,10 @@ header {
 
   }
 
-  // &#why-us .stat-num {
-  //   color: ???
-  // }
+  &#why-us .stat-num,
+  &#why-us .category--title p {
+    color: $clr-secondary-200;
+  }
 
 
   // ------------------------------------------------------- //
@@ -690,7 +752,164 @@ header {
     }
   }
 
- 
+  &#academics .category--title p,
+  &#academics .stat-num {
+    color: $clr-primary-600;
+  }
+
+  &#academics .slider-item .fa {
+    color: $clr-primary-400;
+  }
+
+  // ------------------------------------------------------- //
+  // STUDENT LIFE / SEE YOURSELF THERE
+  // Styling specific to the 'Student Life / See yourself there' section
+  // ------------------------------------------------------- //
+  &#student-life &--hero {
+    background: url(../img/student-life-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    @media (min-width: 60em) {
+      background: url(../img/student-life-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &#student-life .title-stripes {
+    background: url(../img/mobile-stripes/student-life-stripes-mb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: 60em) {
+      background: url(../img/stripes-desktop/student-life-stripes-dt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+ &#student-life .category--title p,
+ &#student-life .stat-num {
+   color: $clr-secondary-400;
+ }
+
+  // ------------------------------------------------------- //
+  // FORT WAYNE / EXPLORE THE CITY
+  // Styling specific to the 'FORT WAYNE / EXPLORE THE CITY' section
+  // ------------------------------------------------------- //
+  &#fort-wayne &--hero {
+    background: url(../img/fort-wayne-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    @media (min-width: 60em) {
+      background: url(../img/fort-wayne-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &#fort-wayne .title-stripes {
+    background: url(../img/mobile-stripes/fort-wayne-stripes-mb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: 60em) {
+      background: url(../img/stripes-desktop/fort-wayne-stripes-dt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &#fort-wayne .category--title p {
+    color: $clr-secondary-500;
+  }
+
+  &#fort-wayne .slider-item {
+    width: 9rem;
+    min-height: 10.5rem;
+  }
+
+  &#fort-wayne .slider-item .fa,
+  &#fort-wayne .slider-item .bottom,
+  &#fort-wayne .slider-item hr {
+    color: $clr-secondary-500;
+  }
+
+  &#fort-wayne .slider-item .font-sm {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &#fort-wayne .stat-num {
+    color: $clr-secondary-500; 
+  }
+
+
+  // ------------------------------------------------------- //
+  // YOUR BACKYARD / THROUGH NEW EYES
+  // Styling specific to the 'YOUR BACKYARD / THROUGH NEW EYES' section
+  // ------------------------------------------------------- //
+  &#your-backyard &--hero {
+    background: url(../img/fort-wayne-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    @media (min-width: 60em) {
+      background: url(../img/fort-wayne-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &#your-backyard .title-stripes {
+    background: url(../img/mobile-stripes/student-life-stripes-mb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: 60em) {
+      background: url(../img/stripes-desktop/student-life-stripes-dt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &#your-backyard .category--title p {
+    color: $clr-secondary-400;
+  }
+
+  &#your-backyard .slider-item {
+    width: 9rem;
+    min-height: 10.5rem;
+  }
+
+  &#your-backyard .slider-item .fa,
+  &#your-backyard .slider-item .bottom,
+  &#your-backyard .slider-item hr {
+    color: $clr-secondary-500;
+  }
+
+  &#your-backyard .slider-item .font-sm {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &#your-backyard .stat-num {
+    color: $clr-secondary-500;
+  }
+
 }
 
 /* -------------------------------------------------- 
@@ -811,10 +1030,6 @@ header {
     // display: flex;
     // flex-direction: column;
     position: relative;
-    
-    .fa {
-      color: $clr-primary-400;
-    }
     
     h3 {
       font-size: 1.375rem;
