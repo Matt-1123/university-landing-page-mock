@@ -312,13 +312,15 @@ header {
     display: block;
     cursor: pointer;
     position: fixed;
-    right: 1em;
+    right: 1.25em;
+    background: $clr-primary-400;
+    padding: 3px;
     
     .line {
-      width: 25px;
-      height: 3px;
-      margin: 5px;
-      background-color: #17253d;
+      width: 16px;
+      height: 2px;
+      margin: 4px;
+      background-color: #fff;
       -webkit-transition: all .3s ease;
       -moz-transition: all .3s ease;
       -ms-transition: all .3s ease;
@@ -328,13 +330,13 @@ header {
   }
 
   .toggle .line1{
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-4px, 5px);
   }
   .toggle .line2{
     opacity: 0;
   }
   .toggle .line3{
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-4px, -4px);
   }
   
   .nav-active {
