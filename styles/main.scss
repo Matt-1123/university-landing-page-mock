@@ -1129,7 +1129,17 @@ header {
   }
 
   input {
-    
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.625rem;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
   }
   
   /* Mark input boxes that gets an error on validation: */
@@ -1146,10 +1156,6 @@ header {
     cursor: pointer;
   }
   
-  
-  
-  
-  
   .steps {
     margin: 1.5rem 0;
   }
@@ -1164,6 +1170,7 @@ header {
     display: inline-block;
     padding: 2px;
     opacity: 0.5;
+    // z-index: -1;
   }
   
   .step.active {
@@ -1175,5 +1182,57 @@ header {
   /* Mark the steps that are finished and valid: */
   .step.finish {
     background-color: $clr-primary-400;
+  }
+
+  #prevBtn {
+    background: none;
+    padding: 0;
+  }
+
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 0 5rem 0;
+
+  .logo {
+    width: 16em;
+    max-width: 16em;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-side {
+    flex-direction: column;
+    order: 2;
+  }
+
+  .sidebar-main {
+    order: 1;
+  }
+
+  @media (min-width: 60rem) {
+    .sidebar-side {
+      order: 1;
+      align-self: flex-start;
+    }
+
+    .sidebar-main {
+      order: 2;
+      display: flex;
+      gap: 2rem;
+    }
+
+    p, a {
+      font-size: 1.125rem;
+    }
   }
 }
