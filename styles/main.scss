@@ -144,6 +144,7 @@ img {
   display: inline-block;
   padding: 1em 2.5em;
   margin: 1em;
+  border: none;
   text-align: center;
   color: $clr-primary-900;
   text-transform: uppercase;
@@ -1103,24 +1104,32 @@ header {
   } 
 }
 
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
-
-  h1 {
-    text-align: center;  
-  }
+.form-cta {
   
-  input {
-    padding: 10px;
+  select {
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    // Additional resets for further consistency
+    background-color: transparent;
+    background: url(../img/icons/chevron.png) no-repeat right transparent;
+    background-position-x: 98%;
+    color: #fff;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
     width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
+    font-family: inherit;
+    font-size: 1.625rem;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+
+  input {
+    
   }
   
   /* Mark input boxes that gets an error on validation: */
@@ -1131,44 +1140,40 @@ header {
   /* Hide all steps by default: */
   .tab {
     display: none;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Raleway;
+    padding-bottom: .2rem;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2rem;
     cursor: pointer;
   }
   
-  button:hover {
-    opacity: 0.8;
-  }
   
-  #prevBtn {
-    background-color: #bbbbbb;
-  }
   
+  
+  
+  .steps {
+    margin: 1.5rem 0;
+  }
+
   /* Make circles that indicate the steps of the form: */
   .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;  
+    height: 24px;
+    width: 24px;
+    margin: 0 4px;
+    border: 1.5px solid $clr-primary-400;
     border-radius: 50%;
     display: inline-block;
+    padding: 2px;
     opacity: 0.5;
   }
   
   .step.active {
     opacity: 1;
+    background: $clr-primary-400;
+    color: #fff;
   }
   
   /* Mark the steps that are finished and valid: */
   .step.finish {
-    background-color: #4CAF50;
+    background-color: $clr-primary-400;
   }
 }
