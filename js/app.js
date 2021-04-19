@@ -15,6 +15,11 @@ const mobileNavToggle = () => {
 };
 
 /* -------------------------------------------------- 
+/* Count Up on Scroll
+/* ------------------------------------------------ */
+$(".counter").countUp();
+
+/* -------------------------------------------------- 
 /* SLIDERS: http://kenwheeler.github.io/slick/
 /* ------------------------------------------------ */
 
@@ -153,6 +158,7 @@ function validateForm() {
     i,
     valid = true;
   x = document.getElementsByClassName("tab");
+  console.log(x);
   y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {

@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Purdue University Fort Wayne</title>
+  <link rel="icon" type="image/png" href="./favicon.png"/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- <link rel="stylesheet" href="css/slick.css">
@@ -14,7 +15,9 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
 </head>
 <body>
@@ -90,7 +93,7 @@
   <section class="visit-day" id="visit-day">
     <div class="container sidebar">
       <div class="sidebar-main container">
-        <p>November <span>12</span> is our next Fall Campus Visit Day</p>
+        <p>November <span class="calendar"><img src="./img/icons/calendar.png" alt="12th"></span> is our next Fall Campus Visit Day</p>
         <a href="#" class="font-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i>
           Add to your Calendar</a>
       </div>
@@ -140,15 +143,15 @@
     
     <div class="stats-counter container">
       <div class="stat">
-        <p class="stat-num">120+</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">120</span>+</p>
         <p>Student Organizations</p>
       </div>
       <div class="stat">
-        <p class="stat-num">14</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">14</span></p>
         <p>NCAA Division I Athletic Teams</p>
       </div>
       <div class="stat">
-        <p class="stat-num">30</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">30</span></p>
         <p>Research Partnerships with Universities Around the Globe</p>
       </div>
     </div>
@@ -267,15 +270,15 @@
     
     <div class="stats-counter container">
       <div class="stat">
-        <p class="stat-num">200+</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">200</span>+</p>
         <p>Degree and certificate programs</p>
       </div>
       <div class="stat">
-        <p class="stat-num">90%</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">90</span>%</p>
         <p>of classes average fewer than 40 students</p>
       </div>
       <div class="stat">
-        <p class="stat-num">330</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">330</span></p>
         <p>full-time faculty members</p>
       </div>
     </div>
@@ -325,15 +328,15 @@
     
     <div class="stats-counter container">
       <div class="stat">
-        <p class="stat-num">1500</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">1500</span></p>
         <p>Events on campus each year</p>
       </div>
       <div class="stat">
-        <p class="stat-num">16</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">16</span></p>
         <p>Chapters of National Honors Societies</p>
       </div>
       <div class="stat">
-        <p class="stat-num">300</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">300</span></p>
         <p>Events for housing residents</p>
       </div>
     </div>
@@ -444,15 +447,15 @@
 
     <div class="stats-counter container">
       <div class="stat">
-        <p class="stat-num">15</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">15</span></p>
         <p>Museums</p>
       </div>
       <div class="stat">
-        <p class="stat-num">86</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">86</span></p>
         <p>Parks and Pavilions</p>
       </div>
       <div class="stat">
-        <p class="stat-num">250+</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">250</span>+</p>
         <p>Partnerships with Regional Businesses</p>
       </div>
     </div>
@@ -537,15 +540,15 @@
 
     <div class="stats-counter container">
       <div class="stat">
-        <p class="stat-num">15</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">15</span></p>
         <p>Museums</p>
       </div>
       <div class="stat">
-        <p class="stat-num">86</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">86</span></p>
         <p>Parks and Pavilions</p>
       </div>
       <div class="stat">
-        <p class="stat-num">250+</p>
+        <p class="stat-num"><span class="counter" data-counter-time="1000">250</span>+</p>
         <p>Partnerships with Regional Businesses</p>
       </div>
     </div>
@@ -574,7 +577,7 @@
   <section class="footer-form">
     <div class="container sidebar">
       <div class="sidebar-side">
-        <p>November <span>12</span> is our next Fall Campus Visit Day</p>
+        <p>November <span class="calendar"><img src="./img/icons/calendar-white.png" alt="12th"></span> is our next Fall Campus Visit Day</p>
         <p><a href="#" class="font-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i>
           Add to your Calendar</a></p>
       </div>
@@ -655,40 +658,10 @@
   
  
   <script type="text/javascript" src="https://use.fontawesome.com/7555e28495.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  -->
   <!-- <script src="./js/slick.min.js"></script>   -->
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript" src="./js/app.js"></script>
-  <!-- <script type="text/javascript">
-    $(document).ready(function(){
-      $('.slider').slick({
-        mobileFirst: true,
-        variableWidth: true,
-        infinite: false,
-        arrows: false,
-        dots: true,
-        slidesToScroll: 2,
-        responsive: [
-          {
-            breakpoint: 959,
-            settings: {
-              slidesToScroll: 3,
-              arrows: true,
-              dots: false,
-            }
-          },
-          {
-            breakpoint: 1359,
-            settings: {
-              slidesToScroll: 0,
-              arrows: false,
-              dots: false,
-            }
-          },
-        ]
-      });
-    });
-  </script> -->
 
 </body>
 </html>

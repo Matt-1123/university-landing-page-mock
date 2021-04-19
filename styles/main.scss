@@ -24,6 +24,7 @@ $ff-accent: 'Archivo Narrow', sans-serif;
 body {
   font-family: $ff-primary;
   font-weight: 400;
+  color: $clr-secondary-700;
   line-height: 1.5;
 
   @media (min-width: 40em) {
@@ -541,6 +542,7 @@ header {
   .sidebar-main {
     text-align: center;
     font-weight: 700;
+    margin-top: 0;
   }
 
   .fa {
@@ -551,10 +553,35 @@ header {
     text-transform: uppercase;
   }
 
-  @media (min-width: 40rem) {
+  .calendar {
+    margin: 0 .25rem;
+    display: block;
+    margin: 0 auto;
+
+    img { 
+      height: 5rem;
+      width: 5rem;
+      margin: .5rem auto;
+    }
+
+    @media (min-width: 60rem) {
+      display: inline-block;
+    
+      img {
+        transform: translateY(33%);
+      }
+    }
+  } 
+
+  @media (min-width: 60rem) {
     .sidebar-side {
       display: flex;
     } 
+
+    p {
+      line-height: 2;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -1012,6 +1039,16 @@ header {
   .slick-arrow {
     background: none;
     border: none;
+    font-size: 0;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .slick-prev::before {
@@ -1025,9 +1062,10 @@ header {
   }
   .slick-prev::before,
   .slick-next::before {
-    color: $clr-primary-400;
     font-size: 2rem;
   }
+
+
 
   .slick-dots li button::before {
     color: $clr-primary-900;
@@ -1068,6 +1106,15 @@ header {
   }
 }
 
+#academics .slick-arrow::before {
+  color: $clr-primary-400;
+}
+
+#fort-wayne .slick-arrow::before,
+#your-backyard .slick-arrow::before {
+  color: $clr-secondary-500;
+}
+
 
 /* -------------------------------------------------- 
 /* FOOTER FORM SECTION
@@ -1095,6 +1142,18 @@ header {
     .fa {
       color: $clr-primary-400;
     }
+
+    .calendar {
+      margin: 0 .25rem;
+      display: block;
+      margin: 0 auto;
+  
+      img { 
+        height: 5rem;
+        width: 5rem;
+        margin: .5rem auto;
+      }
+    } 
   }
 
   .sidebar-main {
