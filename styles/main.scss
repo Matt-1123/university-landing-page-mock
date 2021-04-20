@@ -1074,9 +1074,11 @@ header {
 
 .slider {
   display: flex;
+  flex-direction: column;
   
   @media (min-width: 60rem) {
     padding: 1rem 0;
+    flex-direction: row;
 
     .slick-list {
       margin: 0 1rem;
@@ -1112,7 +1114,34 @@ header {
     font-size: 2rem;
   }
 
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
 
+    li button {
+      font-size: 0;
+      background-color: $clr-primary-900;
+      border: none;
+      border-radius: 50%;
+      padding: 4px;
+      margin: 0 .5rem;
+    }
+
+    li.slick-active button {
+      background-color: $clr-primary-400;
+    }
+
+    // li::before {
+    //   content: '';
+    //   display: inline-block;
+    //   height: 3px;
+    //   width: 3px;
+    //   border-radius: 50%;
+    //   background: $clr-primary-900;
+    // }
+  }
 
   .slick-dots li button::before {
     color: $clr-primary-900;
