@@ -17,7 +17,10 @@ const mobileNavToggle = () => {
 /* -------------------------------------------------- 
 /* Count Up on Scroll
 /* ------------------------------------------------ */
-$(".counter").countUp();
+$(".counter").countUp({
+  time: 2000,
+  delay: 10,
+});
 
 /* -------------------------------------------------- 
 /* SLIDERS: http://kenwheeler.github.io/slick/
