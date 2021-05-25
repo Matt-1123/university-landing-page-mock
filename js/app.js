@@ -47,9 +47,9 @@ $(document).ready(function () {
       {
         breakpoint: 1359,
         settings: {
-          slidesToScroll: 0,
           arrows: false,
           dots: false,
+          draggable: false,
         },
       },
     ],
@@ -74,7 +74,7 @@ $(document).ready(function () {
       {
         breakpoint: 1359,
         settings: {
-          slidesToScroll: 0,
+          draggable: false,
           arrows: false,
           dots: false,
         },
@@ -101,7 +101,7 @@ $(document).ready(function () {
       {
         breakpoint: 1359,
         settings: {
-          slidesToScroll: 0,
+          draggable: false,
           arrows: false,
           dots: false,
         },
@@ -112,7 +112,6 @@ $(document).ready(function () {
 
 const app = () => {
   mobileNavToggle();
-  //slider.slick();
 };
 
 app();
